@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import { PerosnalDetails } from './components/PerosnalDetails';
+
 
 function App() {
+  const [data,setData]=useState({
+    pd:{},
+    pdDisplay:true,
+    bd:{},
+    bdDisplay:false,
+    ld:{},
+    ldDisplay:false
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      margin:"5vw 10vw 5vw 10vw"
+    }} >
+      <h1 className='text-center text-primary'>Get Loan In Sec</h1>
+      <PerosnalDetails setData={setData} data={data} />
     </div>
   );
 }
