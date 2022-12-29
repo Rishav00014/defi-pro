@@ -66,7 +66,7 @@ export const PerosnalDetails = (props) => {
   }
   const handleClick =(e)=>{
     e.preventDefault();
-    props.setData({...props.data,pd:pd})
+    props.setData({...props.data,pd:pd,pdDisplay:false,bdDisplay:true})
     console.log(pd)
   }
   return (
